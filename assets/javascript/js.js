@@ -19,3 +19,20 @@ function displayGifInfo() {
     });
 
 }
+
+// Function for displaying gif data
+function renderButtons() {
+
+    // Deleting the gifs prior to adding new movies
+    $("#buttons-view").empty();
+
+    // Looping through the array of movies
+    for (var i = 0; i < buttons.length; i++) {
+        var a = $("<button>");
+        a.addClass("movie-btn");
+        a.attr("data-name", buttons[i]);
+        a.text(buttons[i]);
+        $("#buttons-view").append(a);
+    }
+
+}
