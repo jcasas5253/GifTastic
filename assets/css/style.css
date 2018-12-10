@@ -1,0 +1,25 @@
+.btn{
+    background-color: rgb(194, 55, 194);
+    color: white;
+}
+
+#add-gif{
+    background-color: rgb(194, 55, 194);
+    color: white;
+}
+
+body {
+    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/rN0W64K4ipau8gxv/light-gray-background-soft-fifteen-shades-of-grey-smooth-background-with-the-addition-of-a-bit-of-noise_be-2qbqqkl_thumbnail-full01.png");
+}
+
+.ratings{
+    font-weight: bolder;
+}
+
+label{
+    font-weight: bolder;
+}
+
+#animalGif{
+    text-align: center;
+}
