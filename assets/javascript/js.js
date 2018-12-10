@@ -36,3 +36,16 @@ function renderButtons() {
     }
 
 }
+
+// This function handles events where a gif button is clicked
+$("#add-gif").on("click", function (event) {
+    event.preventDefault();
+    // This line grabs the input from the textbox
+    var button = $("#gif-input").val().trim();
+
+    // Adding user input from the textbox to our array
+    buttons.push(button);
+
+    // Calling renderButtons which handles the processing of our gif array
+    renderButtons();
+});
