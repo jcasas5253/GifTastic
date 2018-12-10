@@ -23,13 +23,11 @@ function displayGifInfo() {
 // Function for displaying gif data
 function renderButtons() {
 
-    // Deleting the gifs prior to adding new movies
     $("#buttons-view").empty();
 
-    // Looping through the array of movies
     for (var i = 0; i < buttons.length; i++) {
-        var a = $("<button>");
-        a.addClass("movie-btn");
+        var a = $("<button type=button class=btn btn-outline-primary>");
+        a.addClass("gif-btn");
         a.attr("data-name", buttons[i]);
         a.text(buttons[i]);
         $("#buttons-view").append(a);
@@ -67,7 +65,7 @@ function imageChangeState() {
     }   
 }
 
-$(document).on("click", ".movie-btn", displayGifInfo);
+$(document).on("click", ".gif-btn", displayGifInfo);
 $(document).on("click", ".movImage", imageChangeState);
 
 // Calling the renderButtons function to display the intial buttons
