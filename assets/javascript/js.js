@@ -50,7 +50,25 @@ $("#add-gif").on("click", function (event) {
     renderButtons();
 });
 
+function imageChangeState() {          
+
+    var state = $(this).attr("data-state");
+    var animateImage = $(this).attr("data-animate");
+    var stillImage = $(this).attr("data-still");
+
+    if(state == "still") {
+        $(this).attr("src", animateImage);
+        $(this).attr("data-state", "animate");
+    }
+
+    else if(state == "animate") {
+        $(this).attr("src", stillImage);
+        $(this).attr("data-state", "still");
+    }   
+}
+
 $(document).on("click", ".movie-btn", displayGifInfo);
+$(document).on("click", ".movImage", imageChangeState);
 
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
@@ -67,3 +85,4 @@ function displayGif(response) {
         $('#animalGif').append(image);
     }
 }
+
